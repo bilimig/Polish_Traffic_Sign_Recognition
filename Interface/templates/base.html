@@ -1,0 +1,41 @@
+<!doctype html>
+<style>
+    body {
+        box-sizing: border-box;
+        font-family: Verdana, sans-serif;
+        background: #303030;
+        color: #efefef;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: middle;
+        text-align: center;
+    }
+
+    .form-submit {
+        margin-top: 1rem;
+        padding: .5rem 1.5rem;
+        background-color: #dc143c;
+        color: #efefef;
+        cursor: pointer;
+        border: none;
+    }
+
+    .form-submit:hover {
+        color: black;
+    }
+</style>
+<title>Rozpoznaj typ znaku drogowego</title>
+<div class="container">
+    <h1>Dodaj zdjęcie znaku do rozpoznania jego typu</h1>
+    <form enctype="multipart/form-data" method="post" action="/upload-sign">
+        <label for="sign">Zdjęcie znaku:</label>
+        <input type="file" name="sign" id="sign" required> <br/>
+        <input class="form-submit" type="submit" name="send" id="send" value="send">
+    </form>
+</div>
